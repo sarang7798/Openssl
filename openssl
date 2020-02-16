@@ -15,5 +15,5 @@ openssl req -new -key private.key -out example-ca.csr
 openssl x509 -req -days 366 -in example-ca.csr -signkey private.key -out public.crt
 oc get route
 oc delete route app1
-oc create route edge --service=app1 --hostname=app1-test.2886795332-80-simba02.environments.katacoda.com --key=privet.key --cert=public.crt
+oc create route edge --service=app1 --hostname=app1-test.2886795332-80-simba02.environments.katacoda.com --key=private.key --cert=public.crt
 oc get route
